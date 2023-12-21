@@ -13,8 +13,9 @@ async def get_response(message):
         'hallo': 'Hallo! Wie kann ich dir helfen?',
         'wie geht es dir?': 'Mir geht es gut, danke! Wie geht es dir?',
         'python': 'Ich liebe Python! Du auch?',
-        'apk': 'https://downloads.kodiman.net/APK/HSK%20Crew%2020.2.0.apk' #apk
-        'downloads': 'https://downloads.kodiman.net/'
+        'apk': 'https://downloads.kodiman.net/APK/HSK%20Crew%2020.2.0.apk', # apk
+        'downloads': 'https://downloads.kodiman.net/', # Downloads Seite
+        'pw' :'XqNkbQ',
     }
 
     for keyword, response in responses.items():
