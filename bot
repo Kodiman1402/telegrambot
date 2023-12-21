@@ -1,0 +1,53 @@
+'''
+Ja, du hast recht. Die neueste Version der `python-telegram-bot` Bibliothek unterstützt asynchrone Programmierung². Du kannst asynchrone Funktionen in deinem Code verwenden, indem du `run_async=True` in deinen Handlern angibst³. Hier ist ein Beispiel, wie du deinen Code mit asynchronen Funktionen umschreiben kannst:
+'''
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+
+# Setze deinen Telegram-Bot-Token hier ein
+token = '6843666762:AAFcly728-n8lhkwP4w60ki9J6p4k1XrImY'
+updater = Updater(token, use_context=True)
+
+async def get_response(message):
+    responses = {
+        'hallo': 'Hallo! Wie kann ich dir helfen?',
+        'wie geht es dir?': 'Mir geht es gut, danke! Wie geht es dir?',
+        'python': 'Ich liebe Python! Du auch?',
+        'apk': 'https://downloads.kodiman.net/APK/HSK%20Crew%2020.2.0.apk' #apk
+        'downloads': 'https://downloads.kodiman.net/'
+    }
+
+    for keyword, response in responses.items():
+        if keyword in message.lower():
+            return response
+
+    return 'Entschuldigung, ich habe das nicht verstanden.'
+
+async def handle_messages(update: Update, context: CallbackContext) -> None:
+    message = update.message.text
+    response = await get_response(message)
+    await update.message.reply_text(response)
+
+def main():
+    dp = updater.dispatcher
+
+    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_messages, run_async=True))
+
+    updater.start_polling()
+
+    # Lass den Bot laufen, bis du ihn manuell stoppst
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
+'''
+Bitte beachte, dass die Verwendung von `run_async=True` dazu führt, dass deine Handler in separaten Threads ausgeführt werden, was bedeutet, dass sie gleichzeitig mehrere Updates verarbeiten können¹. Es ist wichtig zu beachten, dass dies nicht dasselbe ist wie die Verwendung von `asyncio`, einer Bibliothek für asynchrone I/O in Python. Wenn du `asyncio` in deinem Bot verwenden möchtest, könntest du eine Bibliothek wie `aiogram` in Betracht ziehen⁵.
+
+Quelle: Unterhaltung mit Bing, 21.12.2023
+(1) python-telegram-bot v20.7. https://docs.python-telegram-bot.org/.
+(2) Convert functions to async with python-telegram-bot library. https://stackoverflow.com/questions/72902257/convert-functions-to-async-with-python-telegram-bot-library.
+(3) Question about async handling in python-telegram-bot. https://stackoverflow.com/questions/71157034/question-about-async-handling-in-python-telegram-bot.
+(4) GitHub - aiogram/aiogram: aiogram is a modern and fully asynchronous .... https://github.com/aiogram/aiogram.
+(5) How I can do a send message task inside a dispatcher.run_async() using .... https://stackoverflow.com/questions/71408020/how-i-can-do-a-send-message-task-inside-a-dispatcher-run-async-using-python-te.
+(6) undefined. https://github.com/python-telegram-bot/python-telegram-bot.
+'''
