@@ -1,11 +1,11 @@
-'''
-Ja, du hast recht. Die neueste Version der `python-telegram-bot` Bibliothek unterstützt asynchrone Programmierung². Du kannst asynchrone Funktionen in deinem Code verwenden, indem du `run_async=True` in deinen Handlern angibst³. Hier ist ein Beispiel, wie du deinen Code mit asynchronen Funktionen umschreiben kannst:
-'''
+# Kodiman Bot Version 1
+
+
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # Setze deinen Telegram-Bot-Token hier ein
-token = '******************************************'
+token = '******************************************' # Bot API
 updater = Updater(token, use_context=True)
 
 async def get_response(message):
