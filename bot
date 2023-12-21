@@ -15,7 +15,7 @@ async def get_response(message):
         'python': 'Ich liebe Python! Du auch?',
         'apk': 'https://downloads.kodiman.net/APK/HSK%20Crew%2020.2.0.apk', # apk
         'downloads': 'https://downloads.kodiman.net/', # Downloads Seite
-        'pw' :'XqNkbQ',
+        'pw' :'*******'
     }
 
     for keyword, response in responses.items():
