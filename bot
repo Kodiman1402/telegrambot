@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # Setze deinen Telegram-Bot-Token hier ein
-token = '6843666762:AAFcly728-n8lhkwP4w60ki9J6p4k1XrImY'
+token = '******************************************'
 updater = Updater(token, use_context=True)
 
 async def get_response(message):
