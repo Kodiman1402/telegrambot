@@ -30,7 +30,7 @@ async def wizard_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def pw_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('XqNkbQ')
+    await update.message.reply_text('12345')
 
 
 async def downloads_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
