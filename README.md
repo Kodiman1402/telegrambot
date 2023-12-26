@@ -8,6 +8,8 @@ Quellen:
 
 [python3-python-telegram-bot - python module for Telegram Bot API (Python 3)](https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/python3-python-telegram-bot_12.4.2-1_all.deb.html)
 
+[How To Host Your Bot Online 24/7 For FREE With Python (Telegram, Discord, Etc))](https://youtu.be/2TI-tCVhe9k?si=2ayk9iLiOepgfD1S)
+
 Um das script "main_online.py" auf einem Ubuntu Server auch nach geschlossenem Terminal weiterhin auszuführen ist "Nohup" erforderlich!
 
 Beispiel: "nohup Python name.py &"
