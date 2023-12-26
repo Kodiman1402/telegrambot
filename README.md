@@ -1,4 +1,4 @@
-telegrambot kodiman
+Telegrambot Kodiman v 1.0
 
 Kontakt: https://t.me/Kodiman
 
