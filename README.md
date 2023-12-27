@@ -12,10 +12,6 @@ Quellen:
 
 [Eine kurze Anleitung zum Hosten von Telegram-Bots auf Ubuntu!](https://gist.github.com/tjtanjin/ce560069506e3b6f4d70e570120249ed)
 
-Um das script "main_online.py" auf einem Ubuntu Server auch nach geschlossenem Terminal weiterhin auszuführen ist "Nohup" erforderlich!
-
-Beispiel: "nohup Python name.py &"
-
 Quelle: https://paulorod7.com/running-a-python-script-in-terminal-without-losing-it-by-a-connection-drop
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P4FRK7U)
