@@ -10,7 +10,7 @@ Quellen:
 
 [How To Host Your Bot Online 24/7 For FREE With Python (Telegram, Discord, Etc))](https://youtu.be/2TI-tCVhe9k?si=2ayk9iLiOepgfD1S)
 
-[Eine kurze Anleitung zum Hosten von Telegram-Bots auf Ubuntu!]https://gist.github.com/tjtanjin/ce560069506e3b6f4d70e570120249ed
+[Eine kurze Anleitung zum Hosten von Telegram-Bots auf Ubuntu!](https://gist.github.com/tjtanjin/ce560069506e3b6f4d70e570120249ed)
 
 Um das script "main_online.py" auf einem Ubuntu Server auch nach geschlossenem Terminal weiterhin auszuführen ist "Nohup" erforderlich!
 
