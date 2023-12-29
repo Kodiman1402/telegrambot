@@ -9,6 +9,16 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 TOKEN: Final = '**************************************'
 BOT_USERNAME: Final = '@******************'
 
+# Ban User
+@dp.message_handler(AdminFilter(is_chat_admin=True), IsReplyFilter(is_reply=True), commands=['ban'],
+                    commands_prefix='!', chat_type=[types.ChatType.SUPERGROUP, types.ChatType.GROUP])
+async def ban(message: types.Message):
+    command, reason = message.text.split()
+    user_chat: types.Chat = await bot.get_chat(message.reply_to_message.from_user.id)
+    await message.chat.kick(user_chat.id)
+    await message.delete()
+    await message.answer(f"User @{user_chat.username} banned. Reason - {reason}")
+
 # Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hi! Danke, dass du mit mir redest! Ich bin der Bot von Kodiman!')
