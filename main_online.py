@@ -61,6 +61,10 @@ async def password_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('********')
 
 
+async def facebook_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://www.facebook.com/groups/hskde')
+
+
 # Responses
 def handle_response(text: str) -> str:
     processed: str = text.lower()
@@ -136,6 +140,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('video', video_command))
     app.add_handler(CommandHandler('passwort', passwort_command))
     app.add_handler(CommandHandler('password', password_command))
+    app.add_handler(CommandHandler('facebook', facebook_command))
 
 
     # Messages
