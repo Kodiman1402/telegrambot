@@ -51,6 +51,14 @@ async def repo_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def video_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('https://www.youtube.com/watch?v=3EL_JQU23JM')
+    
+
+async def passwort_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('********')
+    
+
+async def password_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('********')
 
 
 # Responses
@@ -123,6 +131,8 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('admin', admin_command))
     app.add_handler(CommandHandler('repo', repo_command))
     app.add_handler(CommandHandler('video', video_command))
+    app.add_handler(CommandHandler('passwort', passwort_command))
+    app.add_handler(CommandHandler('password', password_command))
 
 
     # Messages
