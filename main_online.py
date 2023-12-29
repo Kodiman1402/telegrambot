@@ -84,6 +84,9 @@ def handle_response(text: str) -> str:
     if 'iptv' in processed:
         return 'Wir supporten keine illegalen IPTV-Listen!!!'
 
+    if 'moin' in processed:
+        return 'Moin Moin!'
+
     # Anfragen
     # if 'apk' in processed:
     #   return 'https://downloads.kodiman.net/APK/HSK%20Crew%2020.2.0.apk'
